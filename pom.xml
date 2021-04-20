@@ -15,11 +15,7 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-  <groupId>srinivaas</groupId>
-  <artifactId>rama</artifactId>
-  <version>1.0</version>
-</dependency>
-  </dependencies>
+    </dependencies>
   <build>
     <finalName>srinivaas</finalName>
   </build>
