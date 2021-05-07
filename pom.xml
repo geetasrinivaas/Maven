@@ -16,6 +16,10 @@
     </dependency>
   </dependencies>
   <build>
-    <finalName>devops2</finalName>
+
+
+
+    <finalName>devops1</finalName>
+>>>>>>> dev
   </build>
 </project>
