@@ -1,37 +1,23 @@
+<%@ taglib uri="http://www.makumba.org/presentation" prefix="mak" %>
+<html>
+<head>
+<title>Hello world!</title>
+</head>
+<body>
 
-<!doctype html>
-<html dir="ltr" lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>New Tab</title>
-    <style>
-      body {
-        background: #FFFFFF;
-        margin: 0;
-      }
+<h1>Create a new person</h1>
+<mak:newForm type="general.Person" action="index.jsp">
+Name: <mak:input field="name" /><br/>
+Surname: <mak:input field="surname" />
+<mak:submit/>
+</mak:newForm>
 
-      #backgroundImage {
-        border: none;
-        height: 100%;
-        pointer-events: none;
-        position: fixed;
-        top: 0;
-        visibility: hidden;
-        width: 100%;
-      }
+<h1>List of persons</h1>
+<mak:list from="general.Person p">
+  <mak:value expr="p.name + ' ' + p.surname" /><br/>
+</mak:list>
 
-      [show-background-image] #backgroundImage {
-        visibility: visible;
-      }
-    </style>
-  </head>
-  <body>
-    <iframe id="backgroundImage"
-        src="chrome-untrusted://new-tab-page/custom_background_image?url=https%3A%2F%2Flh6.googleusercontent.com%2Fproxy%2FfUx750lchxFJb3f37v_-4iJPzcTKtJbd5LDRO7S9Xy7nkPzh7HFU61tN36j4Diaa9Yk3K7kWshRwmqcrulnhbeJrRpIn79PjHN-N%3Dw3840-h2160-p-k-no-nd-mv">
-    </iframe>
-    <ntp-app></ntp-app>
-    <script type="module" src="new_tab_page.js"></script>
-    <link rel="stylesheet" href="chrome://resources/css/text_defaults_md.css">
-    <link rel="stylesheet" href="shared_vars.css">
-  </body>
+<br />
+<a href="index.jspx">View source</a>
+</body>
 </html>
